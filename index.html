@@ -16,6 +16,7 @@
             padding: 10px;
             border-bottom: 1px solid #ddd;
             text-align: center;
+            position: relative;
         }
 
         button {
@@ -23,7 +24,7 @@
             border: 1px solid black;
             color: black;
             padding: 10px 20px;
-            margin: 10px;
+            margin: 5px; /* Reduzierter Abstand */
             cursor: pointer;
             font-size: 16px;
             width: 150px;
@@ -80,42 +81,84 @@
     </style>
     <script>
         function changeLanguage(language) {
-            if (language === 'de') {
-                document.getElementById('header-title').innerText = 'Kryptowährungen kostenlos sammeln';
-                document.getElementById('header-description').innerText = 'Wähle eine Plattform aus und beginne sofort, Kryptowährungen zu verdienen!';
-                document.getElementById('platform-title').innerText = 'Verfügbare Plattformen:';
-                document.getElementById('btc-link').innerText = 'Bitcoin kostenlos verdienen';
-                document.getElementById('litepick-link').innerText = 'Litecoin mit Litepick sammeln';
-                document.getElementById('dogepick-link').innerText = 'Dogecoin mit Dogepick sammeln';
-                document.getElementById('bnbpick-link').innerText = 'Binance Coin mit BNBpick sammeln';
-                document.getElementById('solpick-link').innerText = 'Solana mit Solpick sammeln';
-                document.getElementById('tronpick-link').innerText = 'Tron mit Tronpick sammeln';
-                document.getElementById('tronking-link').innerText = 'Tron mit Tronking sammeln';
-                document.getElementById('dogefree-link').innerText = 'Dogecoin mit Dogefree verdienen';
-                document.getElementById('freeton-link').innerText = 'TON Token mit FreeTON verdienen';
-                document.getElementById('freesol-link').innerText = 'Solana mit FreeSOL verdienen';
-                document.getElementById('polpick-link').innerText = 'Polkadot mit Polpick verdienen';
-            } else if (language === 'en') {
-                document.getElementById('header-title').innerText = 'Earn Free Cryptocurrencies';
-                document.getElementById('header-description').innerText = 'Select a platform and start earning cryptocurrencies instantly!';
-                document.getElementById('platform-title').innerText = 'Available Platforms:';
-                document.getElementById('btc-link').innerText = 'Earn free Bitcoin';
-                document.getElementById('litepick-link').innerText = 'Earn Litecoin with Litepick';
-                document.getElementById('dogepick-link').innerText = 'Earn Dogecoin with Dogepick';
-                document.getElementById('bnbpick-link').innerText = 'Earn Binance Coin with BNBpick';
-                document.getElementById('solpick-link').innerText = 'Earn Solana with Solpick';
-                document.getElementById('tronpick-link').innerText = 'Earn Tron with Tronpick';
-                document.getElementById('tronking-link').innerText = 'Earn Tron with Tronking';
-                document.getElementById('dogefree-link').innerText = 'Earn Dogecoin with Dogefree';
-                document.getElementById('freeton-link').innerText = 'Earn TON Token with FreeTON';
-                document.getElementById('freesol-link').innerText = 'Earn Solana with FreeSOL';
-                document.getElementById('polpick-link').innerText = 'Earn Polkadot with Polpick';
-            }
+            const translations = {
+                de: {
+                    title: 'Kryptowährungen kostenlos sammeln',
+                    description: 'Wähle eine Plattform aus und beginne sofort, Kryptowährungen zu verdienen!',
+                    platformTitle: 'Verfügbare Plattformen:',
+                    btcLink: 'Bitcoin kostenlos verdienen',
+                    litepickLink: 'Litecoin mit Litepick sammeln',
+                    dogepickLink: 'Dogecoin mit Dogepick sammeln',
+                    bnbpickLink: 'Binance Coin mit BNBpick sammeln',
+                    solpickLink: 'Solana mit Solpick sammeln',
+                    tronpickLink: 'Tron mit Tronpick sammeln',
+                    tronkingLink: 'Tron mit Tronking sammeln',
+                    dogefreeLink: 'Dogecoin mit Dogefree verdienen',
+                    freetonLink: 'TON Token mit FreeTON verdienen',
+                    freesolLink: 'Solana mit FreeSOL verdienen',
+                    polpickLink: 'Polkadot mit Polpick verdienen',
+                    langDe: 'Deutsch',
+                    langEn: 'English',
+                    home: 'Home'
+                },
+                en: {
+                    title: 'Earn Free Cryptocurrencies',
+                    description: 'Select a platform and start earning cryptocurrencies instantly!',
+                    platformTitle: 'Available Platforms:',
+                    btcLink: 'Earn free Bitcoin',
+                    litepickLink: 'Earn Litecoin with Litepick',
+                    dogepickLink: 'Earn Dogecoin with Dogepick',
+                    bnbpickLink: 'Earn Binance Coin with BNBpick',
+                    solpickLink: 'Earn Solana with Solpick',
+                    tronpickLink: 'Earn Tron with Tronpick',
+                    tronkingLink: 'Earn Tron with Tronking',
+                    dogefreeLink: 'Earn Dogecoin with Dogefree',
+                    freetonLink: 'Earn TON Token with FreeTON',
+                    freesolLink: 'Earn Solana with FreeSOL',
+                    polpickLink: 'Earn Polkadot with Polpick',
+                    langDe: 'Deutsch',
+                    langEn: 'English',
+                    home: 'Home'
+                }
+            };
+
+            const text = translations[language];
+
+            document.getElementById('header-title').innerText = text.title;
+            document.getElementById('header-description').innerText = text.description;
+            document.getElementById('platform-title').innerText = text.platformTitle;
+            document.getElementById('btc-link').innerText = text.btcLink;
+            document.getElementById('litepick-link').innerText = text.litepickLink;
+            document.getElementById('dogepick-link').innerText = text.dogepickLink;
+            document.getElementById('bnbpick-link').innerText = text.bnbpickLink;
+            document.getElementById('solpick-link').innerText = text.solpickLink;
+            document.getElementById('tronpick-link').innerText = text.tronpickLink;
+            document.getElementById('tronking-link').innerText = text.tronkingLink;
+            document.getElementById('dogefree-link').innerText = text.dogefreeLink;
+            document.getElementById('freeton-link').innerText = text.freetonLink;
+            document.getElementById('freesol-link').innerText = text.freesolLink;
+            document.getElementById('polpick-link').innerText = text.polpickLink;
+            document.getElementById('lang-de').innerText = text.langDe;
+            document.getElementById('lang-en').innerText = text.langEn;
+            document.getElementById('home-button').innerText = text.home;
         }
 
         function loadContent(url) {
             document.getElementById('contentFrame').src = url;
         }
+
+        // Verhindert das Öffnen von Popups innerhalb des IFrames
+        window.addEventListener('load', function() {
+            const iframe = document.getElementById('contentFrame');
+            iframe.addEventListener('load', function() {
+                const iframeWindow = iframe.contentWindow;
+                iframeWindow.addEventListener('click', function(event) {
+                    if (event.target.tagName === 'A' && event.target.target === '_blank') {
+                        event.preventDefault(); // Verhindert das Öffnen neuer Fenster
+                    }
+                });
+            });
+        });
     </script>
 </head>
 <body onload="changeLanguage('de')">
@@ -123,8 +166,8 @@
         <button id="home-button" onclick="document.getElementById('contentFrame').src = ''">Home</button>
         <h1 id="header-title">Kryptowährungen kostenlos sammeln</h1>
         <p id="header-description">Wähle eine Plattform aus und beginne sofort, Kryptowährungen zu verdienen!</p>
-        <button onclick="changeLanguage('de')">Deutsch</button>
-        <button onclick="changeLanguage('en')">English</button>
+        <button id="lang-de" onclick="changeLanguage('de')">Deutsch</button>
+        <button id="lang-en" onclick="changeLanguage('en')">English</button>
     </header>
     
     <main>
@@ -132,23 +175,21 @@
         <section>
             <h2 id="platform-title">Verfügbare Plattformen:</h2>
             <ul>
-                <li><a href="#" onclick="loadContent('https://tinyurl.com/gratis-BTC')">Bitcoin kostenlos verdienen</a></li>
-                <li><a href="#" onclick="loadContent('https://litepick.io/?ref=libertatem')">Litecoin mit Litepick sammeln</a></li>
-                <li><a href="#" onclick="loadContent('https://dogepick.io/?ref=libertatem')">Dogecoin mit Dogepick sammeln</a></li>
-                <li><a href="#" onclick="loadContent('https://bnbpick.io/?ref=libertatem')">Binance Coin mit BNBpick sammeln</a></li>
-                <li><a href="#" onclick="loadContent('https://solpick.io/?ref=libertatem')">Solana mit Solpick sammeln</a></li>
-                <li><a href="#" onclick="loadContent('https://tronpick.io/?ref=libertatem')">Tron mit Tronpick sammeln</a></li>
-                <li><a href="#" onclick="loadContent('https://tronking.io/?ref=Libertatem')">Tron mit Tronking sammeln</a></li>
-                <li><a href="#" onclick="loadContent('https://dogefree.in/?r=350828')">Dogecoin mit Dogefree verdienen</a></li>
-                <li><a href="#" onclick="loadContent('https://freeton.in/?r=10651')">TON Token mit FreeTON verdienen</a></li>
-                <li><a href="#" onclick="loadContent('https://freesol.in/?r=6975')">Solana mit FreeSOL verdienen</a></li>
-                <li><a href="#" onclick="loadContent('https://polpick.io/?ref=Libertatem')">Polkadot mit Polpick verdienen</a></li>
+                <li><a id="btc-link" href="#" onclick="loadContent('https://tinyurl.com/gratis-BTC')">Bitcoin kostenlos verdienen</a></li>
+                <li><a id="litepick-link" href="#" onclick="loadContent('https://litepick.io/?ref=libertatem')">Litecoin mit Litepick sammeln</a></li>
+                <li><a id="dogepick-link" href="#" onclick="loadContent('https://dogepick.io/?ref=libertatem')">Dogecoin mit Dogepick sammeln</a></li>
+                <li><a id="bnbpick-link" href="#" onclick="loadContent('https://bnbpick.io/?ref=libertatem')">Binance Coin mit BNBpick sammeln</a></li>
+                <li><a id="solpick-link" href="#" onclick="loadContent('https://solpick.io/?ref=libertatem')">Solana mit Solpick sammeln</a></li>
+                <li><a id="tronpick-link" href="#" onclick="loadContent('https://tronpick.io/?ref=libertatem')">Tron mit Tronpick sammeln</a></li>
+                <li><a id="tronking-link" href="#" onclick="loadContent('https://tronking.io/?ref=Libertatem')">Tron mit Tronking sammeln</a></li>
+                <li><a id="dogefree-link" href="#" onclick="loadContent('https://dogefree.in/?r=350828')">Dogecoin mit Dogefree verdienen</a></li>
+                <li><a id="freeton-link" href="#" onclick="loadContent('https://freeton.in/?r=10651')">TON Token mit FreeTON verdienen</a></li>
+                <li><a id="freesol-link" href="#" onclick="loadContent('https://freesol.in/?r=6975')">Solana mit FreeSOL verdienen</a></li>
+                <li><a id="polpick-link" href="#" onclick="loadContent('https://polpick.io/?ref=Libertatem')">Polkadot mit Polpick verdienen</a></li>
             </ul>
         </section>
     </main>
 
     <footer>
         <p>© 2024 Deine Webapp - Kryptos einfach verdienen</p>
-    </footer>
-</body>
-</html>
+    </footer

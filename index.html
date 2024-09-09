@@ -4,7 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kryptos Gratis Sammeln</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: yellow;
+            border: 1px solid black;
+            color: black;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 150px; /* gleiche Breite für alle Buttons */
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: gold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid black; /* dünne schwarze Linie */
+            width: 300px; /* Gleiche Größe für alle Links */
+            background-color: yellow;
+            box-sizing: border-box;
+        }
+
+        a:hover {
+            background-color: gold;
+        }
+    </style>
     <script>
         function changeLanguage(language) {
             if (language === 'de') {

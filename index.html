@@ -79,10 +79,6 @@
             border: none;
             display: none; /* Initially hidden */
         }
-
-        .hidden {
-            display: none;
-        }
     </style>
     <script>
         function changeLanguage(language) {
@@ -151,10 +147,12 @@
         function loadContent(url) {
             document.getElementById('contentFrame').src = url;
             document.getElementById('contentFrame').style.display = 'block'; // Show iframe when a link is clicked
+            document.getElementById('platform-section').style.display = 'none'; // Hide platform buttons
         }
 
         function showHome() {
             document.getElementById('contentFrame').style.display = 'none'; // Hide iframe
+            document.getElementById('platform-section').style.display = 'block'; // Show platform buttons
         }
 
         // Verhindert das Öffnen von Popups innerhalb des IFrames
@@ -181,8 +179,7 @@
     </header>
     
     <main>
-        <iframe id="contentFrame" src=""></iframe>
-        <section class="hidden">
+        <section id="platform-section">
             <h2 id="platform-title">Verfügbare Plattformen:</h2>
             <ul>
                 <li><a id="btc-link" href="#" onclick="loadContent('https://tinyurl.com/gratis-BTC')">Bitcoin kostenlos verdienen</a></li>
@@ -193,5 +190,4 @@
                 <li><a id="tronpick-link" href="#" onclick="loadContent('https://tronpick.io/?ref=libertatem')">Tron mit Tronpick sammeln</a></li>
                 <li><a id="tronking-link" href="#" onclick="loadContent('https://tronking.io/?ref=Libertatem')">Tron mit Tronking sammeln</a></li>
                 <li><a id="dogefree-link" href="#" onclick="loadContent('https://dogefree.in/?r=350828')">Dogecoin mit Dogefree verdienen</a></li>
-                <li><a id="freeton-link" href="#" onclick="loadContent('https://freeton.in/?r=10651')">TON Token mit FreeTON verdienen</a></li>
-                <li><a id="freesol-link" href="#" onclick="loadContent('https://freesol.in/?r=6975')">Solana mit FreeSOL verdienen</a></li>
+                <li><a id="freeton-link" href="#" onclick="loadContent('https://freeton.in/?r=10651')">TON Token mit FreeTON verdienen</a

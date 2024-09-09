@@ -144,29 +144,10 @@
             document.getElementById('home-button').innerText = text.home;
         }
 
-        function loadContent(url) {
-            document.getElementById('contentFrame').src = url;
-            document.getElementById('contentFrame').style.display = 'block'; // Show iframe when a link is clicked
-            document.getElementById('platform-section').style.display = 'none'; // Hide platform buttons
-        }
-
         function showHome() {
             document.getElementById('contentFrame').style.display = 'none'; // Hide iframe
             document.getElementById('platform-section').style.display = 'block'; // Show platform buttons
         }
-
-        // Verhindert das Öffnen von Popups innerhalb des IFrames
-        window.addEventListener('load', function() {
-            const iframe = document.getElementById('contentFrame');
-            iframe.addEventListener('load', function() {
-                const iframeWindow = iframe.contentWindow;
-                iframeWindow.addEventListener('click', function(event) {
-                    if (event.target.tagName === 'A' && event.target.target === '_blank') {
-                        event.preventDefault(); // Verhindert das Öffnen neuer Fenster
-                    }
-                });
-            });
-        });
     </script>
 </head>
 <body onload="changeLanguage('de')">
@@ -182,12 +163,19 @@
         <section id="platform-section">
             <h2 id="platform-title">Verfügbare Plattformen:</h2>
             <ul>
-                <li><a id="btc-link" href="#" onclick="loadContent('https://tinyurl.com/gratis-BTC')">Bitcoin kostenlos verdienen</a></li>
-                <li><a id="litepick-link" href="#" onclick="loadContent('https://litepick.io/?ref=libertatem')">Litecoin mit Litepick sammeln</a></li>
-                <li><a id="dogepick-link" href="#" onclick="loadContent('https://dogepick.io/?ref=libertatem')">Dogecoin mit Dogepick sammeln</a></li>
-                <li><a id="bnbpick-link" href="#" onclick="loadContent('https://bnbpick.io/?ref=libertatem')">Binance Coin mit BNBpick sammeln</a></li>
-                <li><a id="solpick-link" href="#" onclick="loadContent('https://solpick.io/?ref=libertatem')">Solana mit Solpick sammeln</a></li>
-                <li><a id="tronpick-link" href="#" onclick="loadContent('https://tronpick.io/?ref=libertatem')">Tron mit Tronpick sammeln</a></li>
-                <li><a id="tronking-link" href="#" onclick="loadContent('https://tronking.io/?ref=Libertatem')">Tron mit Tronking sammeln</a></li>
-                <li><a id="dogefree-link" href="#" onclick="loadContent('https://dogefree.in/?r=350828')">Dogecoin mit Dogefree verdienen</a></li>
-                <li><a id="freeton-link" href="#" onclick="loadContent('https://freeton.in/?r=10651')">TON Token mit FreeTON verdienen</a
+                <li><a id="btc-link" href="https://tinyurl.com/gratis-BTC" target="_blank">Bitcoin kostenlos verdienen</a></li>
+                <li><a id="litepick-link" href="https://litepick.io/?ref=libertatem" target="_blank">Litecoin mit Litepick sammeln</a></li>
+                <li><a id="dogepick-link" href="https://dogepick.io/?ref=libertatem" target="_blank">Dogecoin mit Dogepick sammeln</a></li>
+                <li><a id="bnbpick-link" href="https://bnbpick.io/?ref=libertatem" target="_blank">Binance Coin mit BNBpick sammeln</a></li>
+                <li><a id="solpick-link" href="https://solpick.io/?ref=libertatem" target="_blank">Solana mit Solpick sammeln</a></li>
+                <li><a id="tronpick-link" href="https://tronpick.io/?ref=libertatem" target="_blank">Tron mit Tronpick sammeln</a></li>
+                <li><a id="tronking-link" href="https://tronking.io/?ref=Libertatem" target="_blank">Tron mit Tronking sammeln</a></li>
+                <li><a id="dogefree-link" href="https://dogefree.in/?r=350828" target="_blank">Dogecoin mit Dogefree verdienen</a></li>
+                <li><a id="freeton-link" href="https://freeton.in/?r=10651" target="_blank">TON Token mit FreeTON verdienen</a></li>
+                <li><a id="freesol-link" href="https://freesol.in/?r=6975" target="_blank">Solana mit FreeSOL verdienen</a></li>
+                <li><a id="polpick-link" href="https://polpick.io/?ref=Libertatem" target="_blank">Polkadot mit Polpick verdienen</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

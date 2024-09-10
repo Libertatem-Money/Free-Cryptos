@@ -24,7 +24,7 @@
             border: 1px solid black;
             color: black;
             padding: 10px 20px;
-            margin: 5px; /* Reduzierter Abstand */
+            margin: 5px;
             cursor: pointer;
             font-size: 16px;
             width: 150px;
@@ -73,24 +73,72 @@
             background-color: gold;
         }
     </style>
+    <script>
+        function changeLanguage(language) {
+            if (language === 'de') {
+                document.getElementById('header-title').innerText = 'Kryptowährungen kostenlos sammeln';
+                document.getElementById('header-description').innerText = 'Wähle eine Plattform aus und beginne sofort, Kryptowährungen zu verdienen!';
+                document.getElementById('platform-title').innerText = 'Verfügbare Plattformen:';
+                document.getElementById('btc-link').innerText = 'Bitcoin kostenlos verdienen';
+                document.getElementById('litepick-link').innerText = 'Litecoin mit Litepick sammeln';
+                document.getElementById('dogepick-link').innerText = 'Dogecoin mit Dogepick sammeln';
+                document.getElementById('bnbpick-link').innerText = 'Binance Coin mit BNBpick sammeln';
+                document.getElementById('solpick-link').innerText = 'Solana mit Solpick sammeln';
+                document.getElementById('tronpick-link').innerText = 'Tron mit Tronpick sammeln';
+                document.getElementById('tronking-link').innerText = 'Tron mit Tronking sammeln';
+                document.getElementById('dogefree-link').innerText = 'Dogecoin mit Dogefree verdienen';
+                document.getElementById('freeton-link').innerText = 'TON Token mit FreeTON verdienen';
+                document.getElementById('freesol-link').innerText = 'Solana mit FreeSOL verdienen';
+                document.getElementById('polpick-link').innerText = 'Polkadot mit Polpick verdienen';
+                document.getElementById('freeusdt-link').innerText = 'USDT mit FreeUSDT verdienen';
+                document.getElementById('freematic-link').innerText = 'Matic mit FreeMatic verdienen';
+            } else if (language === 'en') {
+                document.getElementById('header-title').innerText = 'Earn Free Cryptocurrencies';
+                document.getElementById('header-description').innerText = 'Select a platform and start earning cryptocurrencies instantly!';
+                document.getElementById('platform-title').innerText = 'Available Platforms:';
+                document.getElementById('btc-link').innerText = 'Earn free Bitcoin';
+                document.getElementById('litepick-link').innerText = 'Earn Litecoin with Litepick';
+                document.getElementById('dogepick-link').innerText = 'Earn Dogecoin with Dogepick';
+                document.getElementById('bnbpick-link').innerText = 'Earn Binance Coin with BNBpick';
+                document.getElementById('solpick-link').innerText = 'Earn Solana with Solpick';
+                document.getElementById('tronpick-link').innerText = 'Earn Tron with Tronpick';
+                document.getElementById('tronking-link').innerText = 'Earn Tron with Tronking';
+                document.getElementById('dogefree-link').innerText = 'Earn Dogecoin with Dogefree';
+                document.getElementById('freeton-link').innerText = 'Earn TON Token with FreeTON';
+                document.getElementById('freesol-link').innerText = 'Earn Solana with FreeSOL';
+                document.getElementById('polpick-link').innerText = 'Earn Polkadot with Polpick';
+                document.getElementById('freeusdt-link').innerText = 'Earn USDT with FreeUSDT';
+                document.getElementById('freematic-link').innerText = 'Earn Matic with FreeMatic';
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="changeLanguage('de')">
     <header>
         <button id="home-button" onclick="location.href='index.html'">Home</button>
         <h1 id="header-title">Kryptowährungen kostenlos sammeln</h1>
         <p id="header-description">Wähle eine Plattform aus und beginne sofort, Kryptowährungen zu verdienen!</p>
-        <button onclick="location.href='page1.html'">Page 1</button>
-        <button onclick="location.href='page2.html'">Page 2</button>
+        <button onclick="changeLanguage('de')">Deutsch</button>
+        <button onclick="changeLanguage('en')">English</button>
     </header>
     <main>
         <section>
-            <h2>Verfügbare Plattformen:</h2>
+            <h2 id="platform-title">Verfügbare Plattformen:</h2>
             <ul>
-                <li><a href="https://tinyurl.com/gratis-BTC" target="_blank">Bitcoin kostenlos verdienen</a></li>
-                <li><a href="https://litepick.io/?ref=libertatem" target="_blank">Litecoin mit Litepick sammeln</a></li>
-                <!-- Hier die neuen Buttons für die zusätzlichen Links -->
-                <li><a href="https://freeusdt.in/?r=9402" target="_blank">USDT mit FreeUSDT verdienen</a></li>
-                <li><a href="https://freematic.in/?r=3859" target="_blank">Matic mit FreeMatic verdienen</a></li>
+                <li><a id="btc-link" href="https://tinyurl.com/gratis-BTC" target="_blank">Bitcoin kostenlos verdienen</a></li>
+                <li><a id="litepick-link" href="https://litepick.io/?ref=libertatem" target="_blank">Litecoin mit Litepick sammeln</a></li>
+                <li><a id="dogepick-link" href="https://dogepick.io/?ref=libertatem" target="_blank">Dogecoin mit Dogepick sammeln</a></li>
+                <li><a id="bnbpick-link" href="https://bnbpick.io/?ref=libertatem" target="_blank">Binance Coin mit BNBpick sammeln</a></li>
+                <li><a id="solpick-link" href="https://solpick.io/?ref=libertatem" target="_blank">Solana mit Solpick sammeln</a></li>
+                <li><a id="tronpick-link" href="https://tronpick.io/?ref=libertatem" target="_blank">Tron mit Tronpick sammeln</a></li>
+                <li><a id="tronking-link" href="https://tronking.io/?ref=Libertatem" target="_blank">Tron mit Tronking sammeln</a></li>
+                <li><a id="dogefree-link" href="https://dogefree.in/?r=350828" target="_blank">Dogecoin mit Dogefree verdienen</a></li>
+                <li><a id="freeton-link" href="https://freeton.in/?r=10651" target="_blank">TON Token mit FreeTON verdienen</a></li>
+                <li><a id="freesol-link" href="https://freesol.in/?r=6975" target="_blank">Solana mit FreeSOL verdienen</a></li>
+                <li><a id="polpick-link" href="https://polpick.io/?ref=Libertatem" target="_blank">Polkadot mit Polpick verdienen</a></li>
+                <!-- Neue Links -->
+                <li><a id="freeusdt-link" href="https://freeusdt.in/?r=9402" target="_blank">USDT mit FreeUSDT verdienen</a></li>
+                <li><a id="freematic-link" href="https://freematic.in/?r=3859" target="_blank">Matic mit FreeMatic verdienen</a></li>
             </ul>
         </section>
     </main>

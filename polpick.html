@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polkadot mit Polpick verdienen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        button {
+            background-color: yellow;
+            border: 1px solid black;
+            color: black;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 150px;
+        }
+
+        button:hover {
+            background-color: gold;
+        }
+
+        #home-button {
+            background-color: lightgray;
+        }
+
+        #home-button:hover {
+            background-color: gray;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 200px);
+            border: none;
+        }
+    </style>
+    <script>
+        function changeLanguage(language) {
+            if (language === 'de') {
+                document.getElementById('header-title').innerText = 'Polkadot mit Polpick verdienen';
+                document.getElementById('header-description').innerText = 'Verdiene kostenlos Polkadot mit Polpick!';
+                document.getElementById('home-button').innerText = 'Zurück zur Startseite';
+            } else if (language === 'en') {
+                document.getElementById('header-title').innerText = 'Earn Polkadot with Polpick';
+                document.getElementById('header-description').innerText = 'Earn free Polkadot with Polpick!';
+                document.getElementById('home-button').innerText = 'Back to Home';
+            }
+        }
+
+        function preventPopups() {
+            const allLinks = document.getElementsByTagName('a');
+            for (let i = 0; i < allLinks.length; i++) {
+                allLinks[i].setAttribute('target', '_self');
+            }
+        }
+    </script>
+</head>
+<body onload="changeLanguage('de'); preventPopups();">
+    <header>
+        <h1 id="header-title">Polkadot mit Polpick verdienen</h1>
+        <p id="header-description">Verdiene kostenlos Polkadot mit Polpick!</p>
+        <button id="home-button" onclick="window.location.href='index.html'">Zurück zur Startseite</button>
+        <button onclick="changeLanguage('de')">Deutsch</button>
+        <button onclick="changeLanguage('en')">English</button>
+    </header>
+
+    <iframe src="https://polpick.io/?ref=Libertatem"></iframe>
+
+    <footer>
+        <p>© 2024 Deine Webapp - Kryptos einfach verdienen</p>
+    </footer>
+</body>
+</html>

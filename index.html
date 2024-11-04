@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kryptos Gratis Sammeln</title>
     <style>
+        /* Allgemeines Styling */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -55,6 +56,26 @@
         a:hover {
             background-color: gold;
         }
+
+        /* CSS für den Werbebanner am unteren Seitenrand */
+        #promo-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffd700; /* Banner-Hintergrund */
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Damit es über anderen Elementen angezeigt wird */
+        }
+
+        #promo-link {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
     </style>
     <script>
         function changeLanguage(language) {
@@ -79,6 +100,7 @@
                 document.getElementById('bnbfree-link').innerText = 'BNB kostenlos mit BNBFree verdienen';
                 document.getElementById('freetron-link').innerText = 'Tron kostenlos mit FreeTron verdienen';
                 document.getElementById('freeth-link').innerText = 'Ethereum kostenlos mit FreeETH verdienen';
+                document.getElementById('promo-link').innerText = 'Netflix für unter 4€ mit GamsGo – Jetzt ausprobieren!';
             } else if (language === 'en') {
                 document.getElementById('header-title').innerText = 'Earn Free Cryptocurrencies';
                 document.getElementById('header-description').innerText = 'Select a platform and start earning cryptocurrencies instantly!';
@@ -100,6 +122,7 @@
                 document.getElementById('bnbfree-link').innerText = 'Earn free BNB with BNBFree';
                 document.getElementById('freetron-link').innerText = 'Earn free Tron with FreeTron';
                 document.getElementById('freeth-link').innerText = 'Earn free Ethereum with FreeETH';
+                document.getElementById('promo-link').innerText = 'Get Netflix for less then 4$ with GamsGo – Try it now!';
             }
         }
     </script>
@@ -145,5 +168,10 @@
     <footer>
         <p>© 2024 Deine Webapp - Kryptos einfach verdienen</p>
     </footer>
+    <div id="promo-banner" style="display: flex; align-items: center; justify-content: center; background-color: #ffd700; padding: 20px; position: fixed; bottom: 0; width: 100%;">
+    <a id="promo-link" href="https://de.gamsgo.com/partner/zjjZzVEE" target="_blank" style="color: black; font-weight: bold; text-decoration: none;">
+        Netflix für unter 4€ mit GamsGo – Jetzt ausprobieren!
+    </a>
+    </div>
 </body>
 </html>

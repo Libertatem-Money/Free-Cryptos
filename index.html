@@ -64,11 +64,9 @@
             justify-content: center;
             background-color: #ffd700; /* Banner-Hintergrund */
             padding: 20px;
-            position: fixed;
-            bottom: 0;
             width: 100%;
             box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 1000; /* Damit es über anderen Elementen angezeigt wird */
+            box-sizing: border-box
         }
 
         #promo-link {
@@ -164,14 +162,37 @@
             </ul>
         </section>
     </main>
-
-    <footer>
-        <p>© 2024 Deine Webapp - Kryptos einfach verdienen</p>
-    </footer>
-    <div id="promo-banner" style="display: flex; align-items: center; justify-content: center; background-color: #ffd700; padding: 20px; position: fixed; bottom: 0; width: 100%;">
-    <a id="promo-link" href="https://de.gamsgo.com/partner/zjjZzVEE" target="_blank" style="color: black; font-weight: bold; text-decoration: none;">
-        Netflix für unter 4€ mit GamsGo – Jetzt ausprobieren!
-    </a>
+<!-- Dein bestehender Footer -->
+<footer>
+    <!-- Ursprünglicher Inhalt des Footers -->
+    <p>© 2024 Deine Webapp - Kryptos einfach verdienen</p>
+    
+    <!-- Neuer Abschnitt für den Werbebanner -->
+    <div id="promo-banner">
+        <a id="promo-link" href="https://de.gamsgo.com/partner/zjjZzVEE" target="_blank">
+            Verdiene jetzt kostenlos mit GamsGo! Klick hier!
+        </a>
     </div>
+</footer>
+<style>
+    /* Banner Styling */
+    #promo-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffd700; /* Hintergrundfarbe */
+        padding: 20px;
+        width: 100%;
+        box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        margin-top: 20px; /* Abstand zum restlichen Footer-Inhalt */
+    }
+
+    #promo-link {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+    }
+</style>
 </body>
 </html>

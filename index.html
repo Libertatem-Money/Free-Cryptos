@@ -13,7 +13,7 @@
         }
 
         header {
-            margin-top: 100px; /* Abstand für den fixierten oberen Banner */
+            margin-top: 100px;
             margin-bottom: 20px;
         }
 
@@ -58,7 +58,6 @@
             background-color: gold;
         }
 
-        /* CSS für den Werbebanner am oberen Seitenrand */
         #fixed-banner {
             position: fixed;
             top: 0;
@@ -73,7 +72,6 @@
             z-index: 1000;
         }
 
-        /* CSS für den Werbebanner am unteren Seitenrand */
         #promo-banner {
             display: flex;
             align-items: center;
@@ -82,7 +80,6 @@
             padding: 20px;
             width: 100%;
             box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
-            box-sizing: border-box;
             color: white;
         }
 
@@ -106,16 +103,8 @@
                 document.getElementById('solpick-link').innerText = 'Solana mit SolPick sammeln';
                 document.getElementById('tronpick-link').innerText = 'Tron mit TronPick sammeln';
                 document.getElementById('polpick-link').innerText = 'Polygon mit PolPick verdienen';
-                document.getElementById('tronking-link').innerText = 'Tron mit TronKing sammeln';
-                document.getElementById('dogefree-link').innerText = 'Dogecoin mit Dogefree verdienen';
-                document.getElementById('freeton-link').innerText = 'TON Token mit FreeTON verdienen';
-                document.getElementById('freesol-link').innerText = 'Solana mit FreeSOL verdienen';
-                document.getElementById('freeusdt-link').innerText = 'USDT mit FreeUSDT verdienen';
-                document.getElementById('freematic-link').innerText = 'MATIC mit FreeMatic verdienen';
-                document.getElementById('bnbfree-link').innerText = 'BNB kostenlos mit BNBFree verdienen';
-                document.getElementById('freetron-link').innerText = 'Tron kostenlos mit FreeTron verdienen';
-                document.getElementById('freeth-link').innerText = 'Ethereum kostenlos mit FreeETH verdienen';
-                document.getElementById('promo-link').innerText = 'Netflix für unter 4€ mit GamsGo – Jetzt ausprobieren!';
+                document.getElementById('king-btn').innerText = 'King Seiten';
+                document.getElementById('crypto-btn').innerText = 'Crypto Gewinne bis zu 300$';
             } else if (language === 'en') {
                 document.getElementById('header-title').innerText = 'Earn Free Cryptocurrencies';
                 document.getElementById('header-description').innerText = 'Select a platform and start earning cryptocurrencies instantly!';
@@ -128,23 +117,14 @@
                 document.getElementById('solpick-link').innerText = 'Earn Solana with SolPick';
                 document.getElementById('tronpick-link').innerText = 'Earn Tron with TronPick';
                 document.getElementById('polpick-link').innerText = 'Earn Polygon with PolPick';
-                document.getElementById('tronking-link').innerText = 'Earn Tron with TronKing';
-                document.getElementById('dogefree-link').innerText = 'Earn Dogecoin with Dogefree';
-                document.getElementById('freeton-link').innerText = 'Earn TON Token with FreeTON';
-                document.getElementById('freesol-link').innerText = 'Earn Solana with FreeSOL';
-                document.getElementById('freeusdt-link').innerText = 'Earn USDT with FreeUSDT';
-                document.getElementById('freematic-link').innerText = 'Earn MATIC with FreeMatic';
-                document.getElementById('bnbfree-link').innerText = 'Earn free BNB with BNBFree';
-                document.getElementById('freetron-link').innerText = 'Earn free Tron with FreeTron';
-                document.getElementById('freeth-link').innerText = 'Earn free Ethereum with FreeETH';
-                document.getElementById('promo-link').innerText = 'Get Netflix for less than $4 with GamsGo – Try it now!';
+                document.getElementById('king-btn').innerText = 'King Pages';
+                document.getElementById('crypto-btn').innerText = 'Crypto Wins up to 300$';
             }
         }
     </script>
 </head>
 <body onload="changeLanguage('en')">
 
-    <!-- Fixierter Banner oben -->
     <div id="fixed-banner">
         <iframe data-aa='2363032' src='//acceptable.a-ads.com/2363032' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
     </div>
@@ -167,26 +147,18 @@
                 <li><a id="bnbpick-link" href="https://bnbpick.io/?ref=libertatem" target="_blank">Earn Binance Coin with BNBPick</a></li>
                 <li><a id="solpick-link" href="https://solpick.io/?ref=libertatem" target="_blank">Earn Solana with SolPick</a></li>
                 <li><a id="tronpick-link" href="https://tronpick.io/?ref=libertatem" target="_blank">Earn Tron with TronPick</a></li>
-                <li><a id="polpick-link" href="https://polpick.io/?ref=Libertatem" target="_blank">Earn Polygon with PolPick</a></li>
-                <li><a id="tronking-link" href="https://tronking.io/?ref=Libertatem" target="_blank">Earn Tron with TronKing</a></li>
-                <li><a id="dogefree-link" href="https://dogefree.in/?r=350828" target="_blank">Earn Dogecoin with Dogefree</a></li>
-                <li><a id="freeton-link" href="https://freeton.in/?r=10651" target="_blank">Earn TON Token with FreeTON</a></li>
-                <li><a id="freesol-link" href="https://freesol.in/?r=6975" target="_blank">Earn Solana with FreeSOL</a></li>
-                <li><a id="freeusdt-link" href="https://freeusd.win/?r=9402" target="_blank">Earn USDT with FreeUSDT</a></li>
-                <li><a id="freematic-link" href="https://freematic.net/?r=3859" target="_blank">Earn MATIC with FreeMatic</a></li>
-                <li><a id="bnbfree-link" href="https://bnbfree.in/?r=292473" target="_blank">Earn free BNB with BNBFree</a></li>
-                <li><a id="freetron-link" href="https://freetron.io/?r=7254" target="_blank">Earn free Tron with FreeTron</a></li>
-                <li><a id="freeth-link" href="https://freeth.in/?r=165308" target="_blank">Earn free Ethereum with FreeETH</a></li>
+                <li><a id="polpick-link" href="https://polpick.io/?ref=libertatem" target="_blank">Earn Polygon with PolPick</a></li>
             </ul>
         </section>
+        <section>
+            <!-- Neue Buttons -->
+            <button id="king-btn" onclick="location.href='kingseiten.html'">King Pages</button>
+            <button id="crypto-btn" onclick="location.href='crypto-gewinne.html'">Crypto Wins</button>
+        </section>
     </main>
-    
-    <!-- Footer mit unterem Banner -->
-    <footer>
-        <p>© 2024 Deine Webapp - Kryptos einfach verdienen</p>
-        <div id="promo-banner">
-            <a id="promo-link" href="https://de.gamsgo.com/partner/zjjZzVEE" target="_blank">Get Netflix for less than $4 with GamsGo – Try it now!</a>
-        </div>
-    </footer>
+
+    <div id="promo-banner">
+        <p><a id="promo-link" href="https://gamsgo.com" target="_blank">Get Netflix for less than $4 with GamsGo – Try it now!</a></p>
+    </div>
 </body>
 </html>

@@ -11,7 +11,7 @@
             margin: 20px;
         }
         header {
-            margin-top: 50px;
+            margin-top: 80px;
         }
         a {
             display: block;
@@ -37,6 +37,34 @@
             cursor: pointer;
             font-size: 16px;
         }
+        /* Fixierter Werbebanner oben */
+        #frame {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            z-index: 1000;
+            background-color: #f1f1f1;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+        }
+        #frame-link {
+            display: block;
+            text-align: right;
+            font-size: 12px;
+            margin-top: -20px;
+            color: black;
+            text-decoration: none;
+        }
+        #frame-link:hover {
+            text-decoration: underline;
+        }
     </style>
     <script>
         function changeLanguage(language) {
@@ -44,15 +72,31 @@
                 document.getElementById('header-title').innerText = 'King Seiten';
                 document.getElementById('header-description').innerText = 'Hier findest du die besten Seiten, um Kryptowährungen zu verdienen!';
                 document.getElementById('back-btn').innerText = 'Zurück zur Startseite';
+                document.getElementById('etherking-link').innerText = 'EtherKing - Verdiene ETH';
+                document.getElementById('tonking-link').innerText = 'TonKing - Verdiene TON';
+                document.getElementById('liteking-link').innerText = 'LiteKing - Verdiene LTC';
+                document.getElementById('tronking-link').innerText = 'TronKing - Verdiene TRX';
+                document.getElementById('dogeking-link').innerText = 'DogeKing - Verdiene DOGE';
             } else if (language === 'en') {
                 document.getElementById('header-title').innerText = 'King Pages';
                 document.getElementById('header-description').innerText = 'Here you will find the best pages to earn cryptocurrencies!';
                 document.getElementById('back-btn').innerText = 'Back to Homepage';
+                document.getElementById('etherking-link').innerText = 'EtherKing - Earn ETH';
+                document.getElementById('tonking-link').innerText = 'TonKing - Earn TON';
+                document.getElementById('liteking-link').innerText = 'LiteKing - Earn LTC';
+                document.getElementById('tronking-link').innerText = 'TronKing - Earn TRX';
+                document.getElementById('dogeking-link').innerText = 'DogeKing - Earn DOGE';
             }
         }
     </script>
 </head>
 <body onload="changeLanguage('en')">
+
+    <!-- Fixierter Werbebanner oben -->
+    <div id="frame">
+        <iframe data-aa='2370720' src='//acceptable.a-ads.com/2370720' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
+        <a id="frame-link" href="https://aads.com/campaigns/new/?source_id=2370720&source_type=ad_unit&partner=2370720">Advertise here</a>
+    </div>
 
     <header>
         <h1 id="header-title">King Pages</h1>
@@ -62,10 +106,12 @@
     </header>
 
     <main>
-        <a href="https://example1.com" target="_blank">Example King Site 1</a>
-        <a href="https://example2.com" target="_blank">Example King Site 2</a>
-        <a href="https://example3.com" target="_blank">Example King Site 3</a>
-        <!-- Weitere Links können hier hinzugefügt werden -->
+        <!-- Aktualisierte Links -->
+        <a id="etherking-link" href="https://etherking.io/?ref=LibertatemMX" target="_blank">EtherKing - Earn ETH</a>
+        <a id="tonking-link" href="https://tonking.io/?ref=Libertatem" target="_blank">TonKing - Earn TON</a>
+        <a id="liteking-link" href="https://liteking.io/?ref=Libertatem" target="_blank">LiteKing - Earn LTC</a>
+        <a id="tronking-link" href="https://tronking.io/?ref=Libertatem" target="_blank">TronKing - Earn TRX</a>
+        <a id="dogeking-link" href="https://dogeking.io/?ref=Libertatem" target="_blank">DogeKing - Earn DOGE</a>
     </main>
 
     <footer>

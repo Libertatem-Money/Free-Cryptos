@@ -5,17 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Gewinne</title>
     <style>
+        /* Allgemeine Stile */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
         }
+
+        /* Werbebanner */
+        #ad-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            z-index: 1000;
+            background-color: transparent;
+        }
+
+        #content {
+            margin-top: 80px; /* Platz für das Werbebanner */
+        }
+
+        /* Header */
         header {
-            margin-top: 50px;
+            margin-top: 20px;
         }
+
+        /* Buttons für Links */
         a {
             display: block;
-            margin: 10px 0;
+            margin: 15px auto;
             text-decoration: none;
             font-weight: bold;
             color: black;
@@ -23,12 +44,15 @@
             border: 1px solid black;
             background-color: yellow;
             width: 300px;
-            margin: 20px auto;
             box-sizing: border-box;
+            border-radius: 5px;
         }
+
         a:hover {
             background-color: gold;
         }
+
+        /* Sprachwechsel-Buttons */
         button {
             margin-top: 20px;
             padding: 10px 20px;
@@ -36,6 +60,12 @@
             border: 1px solid black;
             cursor: pointer;
             font-size: 16px;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            margin: 30px 0;
         }
     </style>
     <script>
@@ -54,23 +84,48 @@
 </head>
 <body onload="changeLanguage('en')">
 
-    <header>
-        <h1 id="header-title">Crypto Wins</h1>
-        <p id="header-description">Here you will find websites where you can win crypto!</p>
-        <button onclick="changeLanguage('de')">Deutsch</button>
-        <button onclick="changeLanguage('en')">English</button>
-    </header>
+    <!-- Werbebanner -->
+    <div id="ad-banner">
+        <iframe data-aa='2370946' src='//acceptable.a-ads.com/2370946' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
+    </div>
 
-    <main>
-        <a href="https://wincryptoexample1.com" target="_blank">Crypto Win Site 1</a>
-        <a href="https://wincryptoexample2.com" target="_blank">Crypto Win Site 2</a>
-        <a href="https://wincryptoexample3.com" target="_blank">Crypto Win Site 3</a>
-        <!-- Weitere Links können hier hinzugefügt werden -->
-    </main>
+    <!-- Inhalt -->
+    <div id="content">
+        <header>
+            <h1 id="header-title">Crypto Wins</h1>
+            <p id="header-description">Here you will find websites where you can win crypto!</p>
+            <button onclick="changeLanguage('de')">Deutsch</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </header>
 
-    <footer>
-        <button id="back-btn" onclick="location.href='index.html'">Back to Homepage</button>
-    </footer>
+        <main>
+            <!-- Buttons mit den Ziel-Links -->
+            <a href="https://freebfg.com/?ref=50143" target="_blank">Free BFG</a>
+            <a href="https://freenem.com/?ref=378458" target="_blank">Free NEM</a>
+            <a href="https://freecardano.com/?ref=519058" target="_blank">Free Cardano</a>
+            <a href="https://coinfaucet.io/?ref=45430" target="_blank">Free Ripple</a>
+            <a href="https://freebitcoin.io/?ref=885071" target="_blank">Free Bitcoin</a>
+            <a href="https://freesteam.io/?ref=199862" target="_blank">Free Steam</a>
+            <a href="https://freetether.com/?ref=414079" target="_blank">Free Tether</a>
+            <a href="https://freeusdcoin.com/?ref=257777" target="_blank">Free USD Coin</a>
+            <a href="https://freebinancecoin.com/?ref=462932" target="_blank">Free BNB</a>
+            <a href="https://freeethereum.com/?ref=476473" target="_blank">Free Ethereum</a>
+            <a href="https://free-tron.com/?ref=577557" target="_blank">Free Tron</a>
+            <a href="https://freedash.io/?ref=258552" target="_blank">Free Dash</a>
+            <a href="https://freecryptom.com/?ref=156402" target="_blank">Free Chainlink</a>
+            <a href="https://free-ltc.com/?ref=312386" target="_blank">Free Litecoin</a>
+            <a href="https://freeneo.io/?ref=180789" target="_blank">Free NEO</a>
+            <a href="https://free-doge.com/?ref=374702" target="_blank">Free Dogecoin</a>
+            <a href="https://freeshibainu.com/?ref=250323" target="_blank">Free Shiba Inu</a>
+            <a href="https://freepancake.com/?ref=78016" target="_blank">Free PancakeSwap</a>
+            <a href="https://freematic.com/?ref=137354" target="_blank">Free Matic</a>
+            <a href="https://freebittorrent.com/?ref=45838" target="_blank">Free BitTorrent</a>
+        </main>
+
+        <footer>
+            <button id="back-btn" onclick="location.href='index.html'">Back to Homepage</button>
+        </footer>
+    </div>
 
 </body>
 </html>
